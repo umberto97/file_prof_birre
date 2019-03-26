@@ -14,4 +14,9 @@ object DataBase {
         birre.add(Birra("La Biere du Demon", "Brasserie Goudale", "lager", 12f))
         birre.add(Birra("BrewMaster's Choice IPA", "Target 2000", "ipa", 5.8f))
     }
+
+    // Restituisce l'elenco di tutte le birre presenti
+    fun getElencoBirre(): ArrayList<Birra> {
+        return birre
+    }
 }
