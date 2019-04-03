@@ -1,9 +1,11 @@
 package it.unicampania.lsadm.mybeers
 
 import android.content.Context
+import android.os.Bundle
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import it.unicampania.lsadm.mybeers.datamodel.Birra
 
 /**
@@ -29,5 +31,13 @@ class BirreAdapter(val dataset: ArrayList<Birra>, val context: Context) : Recycl
 
         viewHolder.tvNome.text = birra.nome
         viewHolder.tvProduttore.text = birra.produttore
+
+        //imposto l'azione verso il fragment figlio sulla riga
+        viewHolder.itemView.setOnClickListener {
+            val b = Bundle() //è una bisaccia nella quale ci metto ciò che voglio trasportare
+
+            b.putParcelable("birra", birra)
+            Navigation.findNavController(it).navigate(R.id.action_birreFragment_to_figlio_fragment, b)
+        }
     }
 }

@@ -2,6 +2,8 @@ package it.unicampania.lsadm.mybeers.datamodel
 
 /**
  * Singleton per simulare il funzionamento di un ipotetico Database
+ * quando si definisce un object si sta creando un singleton, cioè qualcosa
+ * che può essere istanziato una sola volta, in modo da non creare più di un database
  */
 object DataBase {
 

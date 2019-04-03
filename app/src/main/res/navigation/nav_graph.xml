@@ -5,5 +5,9 @@
             app:startDestination="@id/birreFragment">
 
     <fragment android:id="@+id/birreFragment" android:name="it.unicampania.lsadm.mybeers.BirreFragment"
-              android:label="fragment_birre" tools:layout="@layout/fragment_birre"/>
+              android:label="fragment_birre" tools:layout="@layout/fragment_birre">
+        <action android:id="@+id/action_birreFragment_to_figlio_fragment" app:destination="@id/figlio_fragment"/>
+    </fragment>
+    <fragment android:id="@+id/figlio_fragment" android:name="it.unicampania.lsadm.mybeers.figlio_fragment"
+              android:label="figlio_fragment" tools:layout="@layout/figlio_fragment"/>
 </navigation>
